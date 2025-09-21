@@ -3,78 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Simulación Streaming YouTube</title>
-  <style>
-    body {
-      background-color: #000;
-      color: #fff;
-      font-family: Arial, sans-serif;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin: 0;
-      padding: 20px;
-    }
-
-    h1 {
-      font-size: 32px;
-      margin-bottom: 30px;
-    }
-
-    .player {
-      width: 80%;
-      max-width: 800px;
-      margin-bottom: 20px;
-    }
-
-    iframe {
-      width: 100%;
-      height: 450px;
-      border: none;
-      border-radius: 12px;
-    }
-
-    .channels {
-      display: flex;
-      gap: 15px;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-
-    .channel {
-      background-color: #111;
-      padding: 10px 15px;
-      border-radius: 8px;
-      cursor: pointer;
-      text-align: center;
-      min-width: 120px;
-      transition: 0.3s;
-    }
-
-    .channel:hover {
-      background-color: #333;
-    }
-  </style>
+  <title>7H Film Sport - Streaming</title>
+  <!-- Fuentes -->
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>Simulación Streaming</h1>
+  <header>
+    <img src="assets/logo.png" alt="7H Film Sport Logo" id="logo">
+    <h1>Eventos en Vivo</h1>
+  </header>
 
-  <div class="player">
-    <iframe id="videoPlayer" src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
-  </div>
+  <main>
+    <div id="player-container">
+      <iframe id="mainPlayer" src="" allowfullscreen></iframe>
+    </div>
 
-  <div class="channels">
-    <div class="channel" onclick="changeVideo('dQw4w9WgXcQ')">Canal 1</div>
-    <div class="channel" onclick="changeVideo('3JZ_D3ELwOQ')">Canal 2</div>
-    <div class="channel" onclick="changeVideo('V-_O7nl0Ii0')">Canal 3</div>
-    <div class="channel" onclick="changeVideo('9bZkp7q19f0')">Canal 4</div>
-  </div>
+    <div id="filter-buttons">
+      <button onclick="filterEvents('Todos')">Todos</button>
+      <button onclick="filterEvents('Deportes')">Deportes</button>
+      <button onclick="filterEvents('Música')">Música</button>
+      <button onclick="filterEvents('Freestyle')">Freestyle</button>
+    </div>
 
-  <script>
-    function changeVideo(videoId) {
-      const player = document.getElementById('videoPlayer');
-      player.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
-    }
-  </script>
+    <div id="events-grid">
+      <!-- Eventos se cargan dinámicamente aquí -->
+    </div>
+  </main>
+
+  <script src="scripts.js"></script>
 </body>
 </html>

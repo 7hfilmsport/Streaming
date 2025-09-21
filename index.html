@@ -3,34 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>7H Film Sport - Streaming</title>
-  <!-- Fuentes -->
+  <title>7H Film Sport - Clientes</title>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header>
     <img src="assets/logo.png" alt="7H Film Sport Logo" id="logo">
-    <h1>Eventos en Vivo</h1>
+    <h1>Clientes</h1>
   </header>
 
   <main>
-    <div id="player-container">
-      <iframe id="mainPlayer" src="" allowfullscreen></iframe>
-    </div>
-
-    <div id="filter-buttons">
-      <button onclick="filterEvents('Todos')">Todos</button>
-      <button onclick="filterEvents('Deportes')">Deportes</button>
-      <button onclick="filterEvents('Música')">Música</button>
-      <button onclick="filterEvents('Freestyle')">Freestyle</button>
-    </div>
-
-    <div id="events-grid">
-      <!-- Eventos se cargan dinámicamente aquí -->
+    <div id="clients-grid">
+      <a href="clients/m11.html" class="client-card">
+        <img src="assets/m11.png" alt="M11 Producciones">
+        <h3>M11 Producciones</h3>
+      </a>
+      <a href="clients/liga.html" class="client-card">
+        <img src="assets/liga.png" alt="Liga Premier">
+        <h3>Liga Premier</h3>
+      </a>
+      <a href="clients/siempre.html" class="client-card">
+        <img src="assets/siempre.png" alt="Siempre Futbol">
+        <h3>Siempre Futbol</h3>
+      </a>
+      <a href="clients/lifa.html" class="client-card">
+        <img src="assets/lifa.png" alt="LIFA">
+        <h3>LIFA</h3>
+      </a>
     </div>
   </main>
-
-  <script src="scripts.js"></script>
 </body>
 </html>
